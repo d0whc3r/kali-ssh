@@ -7,7 +7,7 @@ RUN apt-get install -yq metasploit-framework
 
 RUN mkdir /var/run/sshd
 
-COPY authorized_keys ~/.ssh/authorized_keys
+COPY authorized_keys /root/.ssh/authorized_keys
 # SSH login fix. Otherwise user is kicked off after login
 #RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
