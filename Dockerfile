@@ -3,7 +3,7 @@ RUN apt-get update \
   && apt-get upgrade -yq \
   && apt-get install -yq aptitude git make gcc cpp binutils bash-completion
 RUN apt-get install -yq openssh-server
-RUN apt-get install -yq metasploit-framework
+RUN apt-get install -yq metasploit-framework sqlmap
 
 RUN mkdir /var/run/sshd
 
