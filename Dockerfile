@@ -1,7 +1,7 @@
-FROM kalilinux/kali-linux-docker
+FROM kalilinux/kali-rolling
 RUN apt-get update \
   && apt-get upgrade -yq \
-  && apt-get install -yq aptitude git make gcc cpp binutils bash-completion
+  && apt-get install -yq aptitude git make gcc cpp binutils bash-completion binutils dnsutils
 RUN apt-get install -yq openssh-server
 RUN apt-get install -yq metasploit-framework sqlmap
 
